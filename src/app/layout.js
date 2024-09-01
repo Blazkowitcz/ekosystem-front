@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Menu from "@/app/components/Menu"
 import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,9 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-body-tertiary`}>
         <Menu />
-        {children}
+        <div className="" >
+          {children}
+        </div>
       </body>
     </html>
   );
